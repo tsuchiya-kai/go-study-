@@ -109,5 +109,13 @@ func main() {
     //// -------------型の変換------------- /////
     var s string = "100"
     sForI, _ := strconv.Atoi(s) //_ は値を破棄するという意味
+    // int => string の場合は strconv.Itoa
     fmt.Printf("sForI = %T\n", sForI)
+
+    // string => byte配列
+    var h string = "hello world"
+    b := []byte(h)
+    fmt.Println(b)
+    // byte配列 => string
+    fmt.Println(string(b))
 }
