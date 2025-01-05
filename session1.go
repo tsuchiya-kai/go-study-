@@ -1,4 +1,4 @@
-package session1 //ファイルごとにpackageとして命名する、この単位でimportできるっぽい
+package main //ファイルごとにpackageとして命名する、この単位でimportできるっぽい。 命名がmainである必要がありそう
 
 // ビルトインの機能もimportして使う
 import (
@@ -6,8 +6,8 @@ import (
 	"time"
 )
 
-//セッション1
-func session1() {
+//命名がmainである必要がありそう
+func main() {
 
   fmt.Println("hello world")
   fmt.Println(time.Now())
