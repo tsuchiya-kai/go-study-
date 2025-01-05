@@ -74,4 +74,21 @@ func main() {
   c := []byte("HI")
   fmt.Println(c)
   fmt.Println(string(c)) //HI となる
+
+    //// -------------配列型------------- /////
+    // 後から要素数を変更することができない、変更したい場合はスライス型を使う
+
+    var aar1 [3]int 
+    fmt.Println(aar1)
+    fmt.Printf("%T\n",aar1)//[3]int と表示される
+
+    var aarSt [3]string = [3]string{"A","B"}
+    fmt.Println(aarSt)
+    fmt.Printf("%T\n",aarSt)//[3]string と表示される
+    
+    //暗黙的な定義
+    arr3 := [3]int{1,2,3}
+    //要素数を自動取得
+    arr4 := [...]string{"A","B","C"}
+    fmt.Println(arr3,arr4)
 }
