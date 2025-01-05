@@ -5,6 +5,12 @@ import "fmt"
 // 明示的な定義は関数スコープ外で定義することが可能
 var outsideI int = 1000
 
+// 分離した関数
+func other() {
+  var s4 string = "other"
+  fmt.Println(s4)
+}
+
 func main() {
   //明示的な変数定義
   //var 変数名 型 = 値
@@ -33,4 +39,6 @@ func main() {
   // i4 = "hoge" //エラーになる: session2/main.go:30:8: cannot use "hoge" (untyped string constant) as int value in assignment
 
   fmt.Println(outsideI)
+
+  other()
 }
