@@ -78,9 +78,9 @@ func main() {
     //// -------------配列型------------- /////
     // 後から要素数を変更することができない、変更したい場合はスライス型を使う
 
-    var aar1 [3]int 
-    fmt.Println(aar1)
-    fmt.Printf("%T\n",aar1)//[3]int と表示される
+    var arr1 [3]int 
+    fmt.Println(arr1)
+    fmt.Printf("%T\n",arr1)//[3]int と表示される
 
     var aarSt [3]string = [3]string{"A","B"}
     fmt.Println(aarSt)
@@ -91,4 +91,7 @@ func main() {
     //要素数を自動取得
     arr4 := [...]string{"A","B","C"}
     fmt.Println(arr3,arr4)
+
+    //要素数チェック
+    fmt.Println(len(arr1))
 }
