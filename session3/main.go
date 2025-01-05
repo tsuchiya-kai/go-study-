@@ -1,6 +1,9 @@
 package main //ファイルごとにpackageとして命名する、この単位でimportできるっぽい。 命名がmainである必要がありそう
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 // 明示的な定義は関数スコープ外で定義することが可能
 var outsideI int = 1000
@@ -94,4 +97,17 @@ func main() {
 
     //要素数チェック
     fmt.Println(len(arr1))
+
+
+    //// -------------interface型------------- /////
+    // interfaceは全ての型と互換性のある特殊な型、演算の対象としては利用できない
+    var x interface{}
+    fmt.Println(x) //初期値は<nil> ニル、ニルは値を持っていないという意味
+    x = "string"
+    x = [...]int{1}
+
+    //// -------------型の変換------------- /////
+    var s string = "100"
+    sForI, _ := strconv.Atoi(s) //_ は値を破棄するという意味
+    fmt.Printf("sForI = %T\n", sForI)
 }
