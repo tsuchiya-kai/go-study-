@@ -13,7 +13,7 @@ func other() {
 
 func main() {
 
-  ///// int型 /////
+  ///// -------------int型------------- /////
   /*
   * int型の最大値/最小値 参考: https://zenn.dev/heromina/scraps/760807f6990659
   * int8
@@ -34,7 +34,7 @@ func main() {
   // 型の変換
   fmt.Printf("%T\n",int32(i64))
 
-  //// float型 /////
+  //// -------------float型------------- /////
   var fl64 float64 = 2.4
   fmt.Println(fl64)
 
@@ -56,4 +56,14 @@ func main() {
 
   // var u8 uint = 255   //uint型
   // var c64 complex64 = -5 + 12i //complex型
+
+  //// -------------string型------------- /////
+  //複数行を扱うとき
+  var st string = `テスト
+  テスト
+  テスト`
+  fmt.Println(st)
+  fmt.Println(string(st[0]))// stringはbyte型の配列として扱われるためこのようにして1文字目を取得できる, stringに変換する必要あり
+
+  //// -------------string型------------- /////
 }
