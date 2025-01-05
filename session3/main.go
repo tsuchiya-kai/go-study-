@@ -12,6 +12,8 @@ func other() {
 }
 
 func main() {
+
+  ///// int型 /////
   /*
   * int型の最大値/最小値 参考: https://zenn.dev/heromina/scraps/760807f6990659
   * int8
@@ -31,4 +33,27 @@ func main() {
 
   // 型の変換
   fmt.Printf("%T\n",int32(i64))
+
+  //// float型 /////
+  var fl64 float64 = 2.4
+  fmt.Println(fl64)
+
+  fl := 6.4 //暗黙的な定義の場合はintと違ってfloat64が適用される
+  fmt.Println(fl64 + fl) //計算が可能
+
+  var fl32 float32 = 2.4 //float32は基本的にはあまり使わない
+  fmt.Println(fl32)
+  
+  //特殊な数値
+  zero := 0.0
+  pinf := 1.0 / zero //ポジティブインフと読む、正の無限大
+  ninf := -1.0 / zero //ネガティブインフと読む、負の無限大
+  nan := zero / zero
+  fmt.Println(pinf, ninf, nan)
+
+  // > 【uint型(+の整数）、complex(複素数型)】
+  // > 他にもuint(+の整数) complex(複素数型）などの型があるが、あまり使用頻度は無いので今回は紹介だけにします。
+
+  // var u8 uint = 255   //uint型
+  // var c64 complex64 = -5 + 12i //complex型
 }
