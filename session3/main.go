@@ -65,5 +65,13 @@ func main() {
   fmt.Println(st)
   fmt.Println(string(st[0]))// stringはbyte型の配列として扱われるためこのようにして1文字目を取得できる, stringに変換する必要あり
 
-  //// -------------string型------------- /////
+  //// -------------byte型------------- /////
+  byteA := []byte{72,73} //{} はスライスと呼ぶ
+  fmt.Println(byteA) //アスキーコードで表現される
+  fmt.Println(string(byteA)) //HI となる
+
+  //文字列をbyteのスライスに変換
+  c := []byte("HI")
+  fmt.Println(c)
+  fmt.Println(string(c)) //HI となる
 }
